@@ -1,0 +1,15 @@
+BoldAsFont=-1
+Locale=ru_RU
+Charset=UTF-8
+DeleteSendsDEL=yes
+ClicksPlaceCursor=yes
+Columns=110
+Rows=30
+Scrollbar=none
+PgUpDnScroll=yes
+Language=ru
+Term=xterm-256color
+BellType=0
+Font=Ubuntu Mono derivative Powerline
+FontHeight=14
+BackspaceSendsBS=yes
