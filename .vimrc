@@ -7,6 +7,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 colorscheme badwolf
 let mapleader = ","
+set list
+set listchars=tab:>-
+set listchars=space:.
 
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim

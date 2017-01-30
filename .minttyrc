@@ -13,3 +13,4 @@ BellType=0
 Font=Ubuntu Mono derivative Powerline
 FontHeight=14
 BackspaceSendsBS=yes
+BackgroundColour=20,20,20

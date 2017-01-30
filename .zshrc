@@ -68,6 +68,7 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias python='python3'
 alias vi='vim'
+alias ta='sh $HOME/.scripts/tmux-session.sh'
 alias cdd='/cygdrive/d/work/'
 #if [ -f ~/.git-completion.zsh ]; then
 #    . ~/.git-completion.zsh
