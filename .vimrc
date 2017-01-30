@@ -37,6 +37,7 @@ Plugin 'garbas/vim-snipmate'       " Snippets manager
 Plugin 'MarcWeber/vim-addon-mw-utils'  " dependencies #1
 Plugin 'tomtom/tlib_vim'       " dependencies #2
 Plugin 'honza/vim-snippets'        " snippets repo
+Plugin 'kien/ctrlp.vim'
 "
 "---------------=== Languages support ===-------------
 "--- Python ---
@@ -46,7 +47,8 @@ Plugin 'davidhalter/jedi-vim'           " Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-jinja'            " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 Plugin 'vim-syntastic/syntastic'
-"Plugin 'valloric/YouCompleteMe'
+Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -209,7 +211,7 @@ let g:jedi#popup_select_first = 1
 "=====================================================
 " ConqueTerm
 "запуск интерпретатора на F5
-nnoremap <F5> :ConqueTermSplit cmd /C python %<CR>
+nnoremap <F5> :ConqueTermSplit ipython<CR>
 " а debug-mode на <F6>
 nnoremap <F6> :exe "ConqueTermSplit ipython " . expand("%")<CR>
 let g:ConqueTerm_StartMessages = 0
@@ -227,6 +229,16 @@ nnoremap <leader>Tj :set ft=javascript<CR>
 nnoremap <leader>Tc :set ft=css<CR>
 nnoremap <leader>Td :set ft=django<CR>
 
+"Folding
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
 "=====================================================
 "" Languages support
 "=====================================================
@@ -259,8 +271,3 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/sc
 " --- CSS ---
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
