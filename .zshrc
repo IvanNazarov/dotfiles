@@ -2,7 +2,7 @@
 #
 #Created by newuser for 5.3.1
 #Exports {{{
-export ZSH=/home/ivan/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export EDITOR=/usr/bin/vim
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export HISTFILE=~/.zsh_history
