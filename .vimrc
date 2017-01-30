@@ -38,6 +38,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'  " dependencies #1
 Plugin 'tomtom/tlib_vim'       " dependencies #2
 Plugin 'honza/vim-snippets'        " snippets repo
 Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
 "
 "---------------=== Languages support ===-------------
 "--- Python ---
