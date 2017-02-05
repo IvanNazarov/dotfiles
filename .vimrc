@@ -189,6 +189,8 @@ let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
+" disable autocomplete
+let g:neocomplete#disable_auto_complete = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
@@ -210,6 +212,7 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
 
+
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
@@ -221,7 +224,7 @@ endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " C-space completion
-inoremap <expr><C-@>  pumvisible() ? "\<C-@>" : "\<C-n>"
+"inoremap <expr><C-@>  pumvisible() ? "\<C-n>" : "\<C-@>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -310,7 +313,7 @@ let g:ConqueTerm_CloseOnEnd = 0
 autocmd FileType python map <buffer> <leader>8 :PymodeLint<CR>
 
 " автокомплит через <Ctrl+Space>
-inoremap <C-space> <C-x><C-o>
+inoremap <C-@> <C-x><C-o>
 
 " переключение между синтаксисами
 nnoremap <leader>Th :set ft=htmljinja<CR>
