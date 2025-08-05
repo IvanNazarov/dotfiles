@@ -8,6 +8,7 @@ return {
     { "mason-org/mason.nvim", opts = {} },
     "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    --    "Hoffs/omnisharp-extended-lsp.nvim",
 
     -- Useful status updates for LSP.
     { "j-hui/fidget.nvim", opts = {} },
@@ -71,8 +72,21 @@ return {
 
         -- Execute a code action, usually your cursor needs to be on top of an error
         -- or a suggestion from your LSP for this to activate.
-        map("<C-.>", vim.lsp.buf.code_action, "Goto Code Action", { "n", "x" })
+        map("<C-.>", vim.lsp.buf.code_action, "Code Actions", { "n", "x" })
 
+        -- map("gd", function()
+        --   require("omnisharp_extended").lsp_definition()
+        -- end, "Goto Definition")
+        -- map("gy", function()
+        --   require("omnisharp_extended").lsp_type_definition()
+        -- end, "Goto T[y]pe Definition")
+        -- map("gi", function()
+        --   require("omnisharp_extended").lsp_implementation()
+        -- end, "Goto Implementation")
+        -- map("gr", function()
+        --   require("omnisharp_extended").lsp_references()
+        -- end, "References")
+        --
         -- Find references for the word under your cursor.
         -- map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
