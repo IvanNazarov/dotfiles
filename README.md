@@ -1,1 +1,3 @@
 # dotfiles
+
+environment configuration
